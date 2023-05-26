@@ -1,21 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeCorauselComponent } from './components/home-corausel/home-corausel.component';
-import { HomePageComponent } from './components/home-page/home-page.component';
 import { RouterModule, Routes } from '@angular/router';
 
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { CardsComponent } from './components/cards/cards.component';
+import { CardComponent } from './components/card/card.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { CorauselComponent } from './components/corausel/corausel.component';
+
 const routes: Routes = [
-  { path: '', component: HomeCorauselComponent }
+  { path: '', component: HomePageComponent },
 ]
 
 @NgModule({
   declarations: [
-    HomeCorauselComponent,
-    HomePageComponent
+    HomePageComponent,
+    CardsComponent,
+    CardComponent,
+    SidebarComponent,
+    CorauselComponent
   ],
   imports: [
     RouterModule.forChild(routes),
-    CommonModule
+    CommonModule,
   ]
 })
 export class HomeModule { }
