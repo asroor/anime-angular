@@ -8,6 +8,7 @@ const routes: Routes = [
   {
     path: '', component: LayoutComponent, children: [
       { path: 'home', loadChildren: () => import('../modules').then(m => m.HomeModule) },
+      { path: 'watch', loadChildren: () => import('../modules').then((m) => m.WatchModule) },
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: 'profile', loadChildren: () => import('../modules').then(m => m.ProfilModule) }
     ]
