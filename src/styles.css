@@ -22,6 +22,12 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+.container {
+    max-width: 1920px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
 .card-title {
     overflow: hidden;
     white-space: nowrap;
