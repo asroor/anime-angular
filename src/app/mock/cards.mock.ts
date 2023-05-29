@@ -1,7 +1,9 @@
 import { ICards } from "../interface/cards";
 
 export const CARDS_LIST: ICards[] = [
-    { title: "Naruto" },
+    {
+        title: "Naruto",
+    },
     { title: "One Piece" },
     { title: "Bleach" },
     { title: "Attack on Titan" },

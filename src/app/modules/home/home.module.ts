@@ -19,7 +19,7 @@ const routes: Routes = [
     CardsComponent,
     CardComponent,
     SidebarComponent,
-    CorauselComponent
+    CorauselComponent,
   ],
   imports: [
     RouterModule.forChild(routes),

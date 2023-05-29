@@ -18,6 +18,16 @@ body {
     -ms-user-select: none;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.card-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 .row {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;

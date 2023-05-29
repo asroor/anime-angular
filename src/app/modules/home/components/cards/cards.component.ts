@@ -22,7 +22,7 @@ export class CardsComponent implements OnInit {
   getItems() {
     this.subscription = this.APIservice.get_mock().subscribe(
       data => {
-        this.cards = data;
+        this.cards = data.slice(0, 12);
       },
       err => {
         console.log(err);
