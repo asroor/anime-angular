@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { LayoutComponent } from './layout.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterModule, Routes } from '@angular/router';
+import { WatchModule } from '../modules';
 
 const routes: Routes = [
   {
     path: '', component: LayoutComponent, children: [
       { path: 'home', loadChildren: () => import('../modules').then(m => m.HomeModule) },
       { path: 'watch', loadChildren: () => import('../modules').then((m) => m.WatchModule) },
+      { path: 'watch/:id', loadChildren: () => import('../modules').then((m) => m.WatchModule) },
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: 'profile', loadChildren: () => import('../modules').then(m => m.ProfilModule) }
     ]
@@ -26,3 +28,6 @@ const routes: Routes = [
   ]
 })
 export class LayoutModule { }
+export const routingComponents = [
+  WatchModule
+]

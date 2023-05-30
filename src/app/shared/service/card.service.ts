@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, catchError, of, throwError } from 'rxjs';
 import { ICards } from '../../interface/cards';
 import { CARDS_LIST } from '../../mock';
 @Injectable({
@@ -8,6 +8,10 @@ import { CARDS_LIST } from '../../mock';
 export class CardService {
   constructor() { }
   get_mock(): Observable<ICards[]> {
-    return of(CARDS_LIST)
+    return of(CARDS_LIST).pipe(
+      catchError(error => {
+        return throwError(error.message || error.status || "server error");
+      })
+    )
   }
 }

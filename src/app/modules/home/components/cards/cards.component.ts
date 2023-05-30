@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ICards } from 'src/app/interface/cards';
 import { CardService } from 'src/app/shared/service/card.service';
@@ -10,7 +11,7 @@ import { CardService } from 'src/app/shared/service/card.service';
 })
 export class CardsComponent implements OnInit {
   cards!: ICards[];
-  constructor(private APIservice: CardService) { }
+  constructor(private APIservice: CardService, private router: Router) { }
   private subscription = new Subscription();
 
   ngOnInit(): void {
@@ -28,5 +29,8 @@ export class CardsComponent implements OnInit {
         console.log(err);
       }
     )
+  }
+  onSelect(card: any) {
+    this.router.navigate(['watch', card.id])
   }
 }
