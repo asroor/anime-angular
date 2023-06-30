@@ -1,0 +1,22 @@
+.item-series {
+    margin-bottom: 10px;
+}
+
+.item-series .checkbox-input {
+    appearance: none;
+    --wepkit-appearance: none;
+    -moz-appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #8A8A8A;
+}
+
+.item-series .checkbox-input:checked {
+    border: 2px solid #FFFF;
+    background-color: #FACC6D;
+
+}
+
+.item-series .checkbox-input:checked~label {
+    color: #fff;
+}

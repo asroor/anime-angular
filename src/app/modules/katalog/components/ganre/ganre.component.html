@@ -1,0 +1,41 @@
+<div class="w-[200px]">
+    <h2 class="text-white border-b-2 border-[#FACC6D] text-[20px] mb-[20px]">Anime</h2>
+    <ul>
+        <li class="item-series">
+            <input class="checkbox-input" id="checkbox1" type="checkbox">
+            <label type="checkbox" class="text-[#8A8A8A] text-[18px] cursor-pointer ml-[15px]"
+                for="checkbox1">Film</label>
+        </li>
+        <li class="item-series">
+            <input class="checkbox-input" id="checkbox2" type="checkbox">
+            <label type="checkbox" for="checkbox2"
+                class="text-[#8A8A8A] cursor-pointer text-[18px] ml-[15px]">Serial</label>
+        </li>
+        <li class="item-series">
+            <input class="checkbox-input" id="checkbox3" type="checkbox">
+            <label type="checkbox" for="checkbox3"
+                class="text-[#8A8A8A] cursor-pointer text-[18px] ml-[15px]">OVA</label>
+        </li>
+        <li class="item-series">
+            <input class="checkbox-input" id="checkbox4" type="checkbox">
+            <label type="checkbox" for="checkbox4"
+                class="text-[#8A8A8A] cursor-pointer text-[18px] ml-[15px]">Ongoin</label>
+        </li>
+    </ul>
+    <h2 class="text-white border-b-2 border-[#FACC6D] text-[20px] mb-[20px]">Janrlar</h2>
+    <ul>
+        <li *ngFor="let item of title" class="item-series">
+            <input class="checkbox-input cursor-pointer" [id]="'checkbox_ganre' + item.id" type="checkbox">
+            <label type="checkbox" class="text-[#8A8A8A] capitalize text-[18px] cursor-pointer ml-[15px]"
+                [for]="'checkbox_ganre' + item.id">{{item.title}}</label>
+        </li>
+    </ul>
+    <h2 class="text-white border-b-2 border-[#FACC6D] text-[20px] mb-[20px]">Yillar</h2>
+    <ul>
+        <li *ngFor="let item of years" class="item-series">
+            <input class="checkbox-input cursor-pointer" [id]="'checkbox_year' + item.id" type="checkbox">
+            <label type="checkbox" class="text-[#8A8A8A] capitalize text-[18px] cursor-pointer ml-[15px]"
+                [for]="'checkbox_year' + item.id">{{item.year}}</label>
+        </li>
+    </ul>
+</div>
